@@ -1,6 +1,10 @@
 .form {
     &__input:not(:last-child) {
         margin-bottom: 1.5rem;
+
+        @include respond(tab-port) {
+            margin-bottom: .5rem;
+        }
     }
 
     &__input {
@@ -15,6 +19,10 @@
         width: 90%;
         display: block;
         transition: all .3s;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
 
         &::-webkit-input-placeholder {
             color: $color-grey-dark-2
@@ -41,6 +49,10 @@
         display: block;
         transform: translateY(-1.3rem);
         transition: all .3s;
+
+        @include respond(tab-port) {
+            margin-top: 1.2rem;
+        }
     }
 
     &__input:placeholder-shown + &__label {
@@ -58,6 +70,11 @@
         display: inline-block;
         padding-top: 1.5rem;
         padding-bottom: 2rem;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
     }
 
     &__radio-label {
@@ -76,6 +93,11 @@
         position: absolute;
         left: 0;
         top: -.4rem;
+
+        @include respond(tab-port) {
+            height: 20px;
+            width: 20px;
+        }
 
         &::after {
             content: '';
